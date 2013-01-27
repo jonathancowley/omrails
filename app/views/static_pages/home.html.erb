@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+	<h1> You're signed in!</h1>
+	<h2> Welcome to the world of GetManaging </h2>
+	
+<% else %>
+
+<div class="center hero-unit">
+    <h1>Welcome to getmanaging</h1>
+
+    <h2>
+      You've found the home page for
+      <a href="http://getmanaging.com/">GetManaging</a>'s beta module
+    </h2>
+
+    <%= link_to "Sign up now", new_user_registration_path, 
+                                class: "btn btn-large btn-primary" %>
+<%= link_to "What we do", href="http://getmanaging.com/index.php/what-we-do",
+class: "btn btn-large btn-primary"%>
+
+</div>
+
+<% end %>
